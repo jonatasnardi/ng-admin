@@ -1,0 +1,98 @@
+@import '../../styles.scss';
+
+.wrapper-login {
+    width: 100%;
+    // position: absolute;
+    min-height: calc(100vh - 60px);
+    background-size: cover;
+    left: 0;
+    top: 0;
+
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  .text-login {
+      text-align: center;
+      margin-bottom: 15px;
+      .text-content {
+          color: $gray-dark;
+          font-size: 16px;
+          text-transform: uppercase;
+      }
+
+  }
+
+  .image-login {
+      text-align: center;
+      margin-bottom: 25px;
+      img {
+          width: 200px;
+          @include sm(){ width: 180px; }
+          @include xs(){ width: 160px; }
+      }
+  }
+
+  .button-login {
+      text-align: center;
+
+      button {
+          width: auto;
+      }
+  }
+
+  .form-control:focus {
+      box-shadow: none;
+  }
+
+  .container-user {
+      margin-right: 0;
+      .icon-user {
+          position: absolute;
+          padding: 9px 0px 0px 10px;
+          @include xs(){ padding: 8px 0px 0px 10px; }
+          i {
+              font-size: 20px;
+              color: $secondary;
+              @include xs(){ font-size: 18px; }
+          }
+      }
+  }
+
+  .last-from-group {
+    margin-bottom: 5px;
+  }
+
+  .container-password {
+    margin-right: 0;
+  }
+
+  .register-box {
+    text-align: center;
+    margin-top: 40px;
+
+    .title-container {
+      .text-title {
+        color: $gray-dark;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .forgot-box {
+    margin-bottom: 20px;
+    .forgot-container {
+      padding: 0 20px;
+      .forgot-text {
+        color: $secondary;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+    }
+  }
+}

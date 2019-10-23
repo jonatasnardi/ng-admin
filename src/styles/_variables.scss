@@ -1,0 +1,43 @@
+// COLORS
+$primary: #175e89;
+$secondary: #A064A6;
+$terciary: #767676;
+$bg-color: #F0F4F7;
+$blue: #044877;
+$blue-dark: #1E3259;
+$blue-light: #67CBEB;
+$purple: #609;
+$orange: #E08F00;
+$green: #1cc88a;
+$white: #FFF;
+$black: #000;
+$gray-dark: #5a5c69;
+$gray-md: #dddfeb;
+$gray-light: #999;
+$pink: #EB3C7D;
+$red: #e74a3b;
+$yellow: #FED00D;
+$gold: #F5970B;
+$soft: #F6F8F9;
+$body-bg: $soft;
+
+// FONTS
+$trebuchet: 'Trebuchet MS';
+$roboto: 'Roboto';
+$font-default: $trebuchet, cursive;
+$font-base-family: $roboto;
+$font-base-size: '16px';
+$line-base-line-height: '1.2em';
+
+// SIZES
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-large-width: 1344px;
+
+// MEDIA QUERIES
+$desktop-large: "(min-width: 1600px)";
+$tablet: "(max-width: 1200px)";
+$mobile: "(max-width: 767px)";
+$iphone4: "(max-height: 530px)";
+$iphone5: "(max-height: 630px)";
+$iphoneX: "(min-height: 800px)";

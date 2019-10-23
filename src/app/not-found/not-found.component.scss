@@ -1,0 +1,23 @@
+@import "../../styles.scss";
+
+.container-not-found {
+  padding: 35vh 0;
+}
+
+h1 {
+  color: $gray-dark;
+  span {
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+}
+
+a {
+  color: $white;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0 20px;
+}

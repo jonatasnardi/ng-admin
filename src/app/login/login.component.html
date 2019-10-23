@@ -1,0 +1,78 @@
+<div class="wrapper-login">
+  <section class="container">
+
+    <div class="row">
+      <div class="col-12 offset-sm-2 offset-md-3 offset-lg-4 col-sm-8 col-md-6 col-lg-4">
+
+          <div class="text-login">
+            <h3 class="text-content">Bem-vindo</h3>
+          </div>
+
+        <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+          <!-- Input user -->
+          <div class="form-group">
+            <div class="container-user">
+              <input type="text" class="form-control" placeholder="Seu email" [ngClass]="{'invalid-form-field': !formLogin.controls['login'].valid && formLogin.controls['login'].touched}"  autocomplete="off" formControlName="login" [(ngModel)]="login" required>
+            </div>
+          </div>
+
+          <!-- Input password -->
+          <div class="form-group last-from-group">
+            <div class="container-password">
+              <input type="password" class="form-control" placeholder="Sua senha" autocomplete="new-password" [ngClass]="{'invalid-form-field': !formLogin.controls['password'].valid && formLogin.controls['password'].touched}"  formControlName="password" [(ngModel)]="password" required>
+            </div>
+          </div>
+
+          <div class="forgot-box">
+              <div class="forgot-container">
+                <a href="javascript:void(0);" class="forgot-text" (click)="openModalForgotPassword()">Esqueceu a senha?</a>
+              </div>
+            </div>
+
+          <div class="button-login">
+            <button type="submit" class="btn btn-dark btn-secondary">
+              <i class="fas fa-spinner fa-spin" *ngIf="verifyLoader"></i>
+              <span *ngIf="!verifyLoader">Entrar</span>
+            </button>
+          </div>
+
+          <div class="register-box">
+            <div class="title-container">
+              <h3 class="text-title">É o seu primeiro acesso?</h3>
+            </div>
+
+            <div class="button-container">
+              <a routerLink="/register" class="btn btn-primary">Cadastre-se</a>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="modal fade" id="modelForgotPassword" tabindex="-1" role="dialog" aria-labelledby="infoModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <form [formGroup]="formRecover" (ngSubmit)="onRecoverPassword()">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Recuperar senha</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="Email">E-mail:</label>
+            <input type="text" name="email" placeholder="Seu email" class="form-control" id="emailInputModal" [ngClass]="{'invalid-form-field': !formRecover.controls['email'].valid && formRecover.controls['email'].touched}"  autocomplete="off" formControlName="email" [(ngModel)]="login" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Recuperar senha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

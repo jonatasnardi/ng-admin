@@ -1,0 +1,50 @@
+@import "../_variables.scss";
+@import "../_mixins.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: $font-base-family;
+    font-size: $font-base-size;
+    color: $gray-dark;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-default;
+}
+
+.show-mobile {
+    display: none;
+    @include xs() {
+        display: block;
+    }
+}
+
+.show-desktop {
+    display: block;
+    @include xs() {
+        display: none;
+    }
+}
+
+::selection {
+    background: rgba(106, 186, 187, 0.4);
+    color: $gray-dark;
+}
+
+::-moz-selection {
+    background: rgba(106, 186, 187, 0.4);
+    color: $gray-dark;
+}
+
+// base styles
+
+.secondary-title {
+  font-size: 16px;
+  color: $gray-dark;
+  text-transform: uppercase;
+}
